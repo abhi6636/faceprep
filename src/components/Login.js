@@ -29,7 +29,7 @@ const Login = () => {
       setShowError(true);
       setTimeout(() => {
         setShowError(false);
-      }, 60000);
+      }, 1000);
     }
   };
 
