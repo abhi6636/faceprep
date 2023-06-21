@@ -1,0 +1,132 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    width: calc(25% - 1rem);
+    margin: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .card-details h2 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .skeleton-loading {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  
+  .skeleton-card {
+    width: calc(25% - 1rem);
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    animation: skeleton-pulse 1s infinite ease-in-out;
+  }
+  
+  @keyframes skeleton-pulse {
+    0% {
+      background-color: #f0f0f0;
+    }
+    50% {
+      background-color: #e0e0e0;
+    }
+    100% {
+      background-color: #f0f0f0;
+    }
+  }
+  
+  @keyframes skeleton-colors {
+    0% {
+      background-color: red;
+    }
+    14% {
+      background-color: orange;
+    }
+    28% {
+      background-color: yellow;
+    }
+    42% {
+      background-color: green;
+    }
+    57% {
+      background-color: blue;
+    }
+    71% {
+      background-color: indigo;
+    }
+    85% {
+      background-color: violet;
+    }
+    100% {
+      background-color: red;
+    }
+  }
+  
+  
+  .skeleton-loading .skeleton-card:nth-child(1) {
+    animation-delay: 0.1s;
+    animation-duration: 1s;
+    animation-name: skeleton-colors;
+  }
+  
+  .skeleton-loading .skeleton-card:nth-child(2) {
+    animation-delay: 0.2s;
+    animation-duration: 1s;
+    animation-name: skeleton-colors;
+  }
+  
+  .skeleton-loading .skeleton-card:nth-child(3) {
+    animation-delay: 0.3s;
+    animation-duration: 1s;
+    animation-name: skeleton-colors;
+  }
+  
+  .skeleton-loading .skeleton-card:nth-child(4) {
+    animation-delay: 0.4s;
+    animation-duration: 1s;
+    animation-name: skeleton-colors;
+  }
+  
+  @media (max-width: 1200px) {
+    .card {
+      width: calc(33.33% - 1rem);
+    }
+    .skeleton-card {
+      width: calc(33.33% - 1rem);
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .card {
+      width: calc(50% - 1rem);
+    }
+    .skeleton-card {
+      width: calc(50% - 1rem);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      width: calc(100% - 1rem);
+    }
+    .skeleton-card {
+      width: calc(100% - 1rem);
+    }
+  }
+  
